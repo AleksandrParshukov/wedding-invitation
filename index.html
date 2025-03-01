@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Приглашение</title>
+  </head>
+
+  <body>
+    <header class="header">
+      <img src="img/top_img.webp" width="400" height="600" alt="">
+
+      <p class="names">
+        Александр и<br>
+        Виктория
+      </p>
+
+      <ul class="timer-list">
+        <li id="days"></li>
+        <li id="hours"></li>
+        <li id="minutes"></li>
+        <li id="seconds"></li>
+      </ul>
+
+      <p class="header-bottom">
+        <span>приглашение</span>
+        <span>приглашение</span>
+        <span>приглашение</span>
+        <span>приглашение</span>
+      </p>
+    </header>
+
+    <main class="main">
+      <p class="caption">Дорогие гости!</p>
+
+      <p class="text">
+        Наша безграничная любовь дала повод собрать родных и близких вместе! <br>
+        Будем рады видеть вас на нашей свадьбе
+      </p>
+
+      <img src="img/top_img.webp" width="360" height="270" alt="">
+
+      <div class="address-block">
+        <img src="img/top_img.webp" width="200" height="300" alt="">
+
+        <p class="date">25.05.2025</p>
+        <p class="address">
+          Дворец бракосочетания №2 <br>
+          ул. Фурштатская, д.52
+        </p>
+        <a href="http://maps.yandex.ru/-/CBQlZ03N" class="map-link">карта</a>
+      </div>
+
+      <div class="schedule-block">
+        <p class="caption">Программа дня</p>
+
+        <ul class="schedule">
+          <li>
+            <p class="schedule-time">16:30</p>
+            <p class="schedule-event">Сбор гостей</p>
+          </li>
+          <li>
+            <p class="schedule-time">17:00</p>
+            <p class="schedule-event">Фуршет</p>
+          </li>
+          <li>
+            <p class="schedule-time">19:30</p>
+            <p class="schedule-event">Завершение вечера</p>
+          </li>
+        </ul>
+      </div>
+
+      <div class="dresscode-block">
+        <p class="caption">Дресс-код</p>
+
+        <p class="text">
+          Для нас главное - ваше присутствие! <br>
+          Но нам будет приятно, если вы поддержите цветовую гамму свадьбы в своих нарядах
+        </p>
+
+        <p class="dresscode-caption">Женщинам:</p>
+        <ul class="dresscode-list">
+          <li style="background-color: #151410;"></li>
+          <li style="background-color: #654337;"></li>
+          <li style="background-color: #A67355;"></li>
+          <li style="background-color: #106F5B;"></li>
+          <li style="background-color: #858256;"></li>
+          <li style="background-color: #72786B;"></li>
+        </ul>
+
+        <p class="dresscode-caption">Мужчинам:</p>
+        <ul class="dresscode-list">
+          <li style="background-color: #151410;"></li>
+          <li style="background-color: #707374;"></li>
+          <li style="background-color: #5F4B40;"></li>
+          <li style="background-color: #9A7E70;"></li>
+          <li style="background-color: #938676;"></li>
+        </ul>
+      </div>
+    </main>
+
+    <form action="https://formspree.io/f/xbldnkjw" method="POST">
+      <label>
+        Your email:
+        <input type="email" name="email">
+      </label>
+      <label>
+        Your message:
+        <textarea name="message"></textarea>
+      </label>
+      <label>
+        Name:
+        <input type="text" name="name">
+      </label>
+      <!-- your other form fields go here -->
+      <button type="submit">Send</button>
+    </form>
+
+    <script src="script.js"></script>
+  </body>
+
+</html>
