@@ -5,23 +5,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Приглашение</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
 
   <body>
     <header class="header">
       <img src="img/top_img.webp" width="400" height="600" alt="">
 
-      <p class="names">
-        Александр и<br>
-        Виктория
-      </p>
-
-      <ul class="timer-list">
-        <li id="days"></li>
-        <li id="hours"></li>
-        <li id="minutes"></li>
-        <li id="seconds"></li>
-      </ul>
+      <div class="header-content">
+        <p class="names">
+          <span style="margin-right: 110px;">Александр и</span><br>
+          <span style="margin-left: 110px;">Виктория</span>
+        </p>
+        <ul class="timer-list">
+          <li id="days"></li>
+          <li id="hours"></li>
+          <li id="minutes"></li>
+          <li id="seconds"></li>
+        </ul>
+      </div>
 
       <p class="header-bottom">
         <span>приглашение</span>
@@ -32,24 +34,25 @@
     </header>
 
     <main class="main">
-      <p class="caption">Дорогие гости!</p>
-
-      <p class="text">
-        Наша безграничная любовь дала повод собрать родных и близких вместе! <br>
-        Будем рады видеть вас на нашей свадьбе
-      </p>
-
-      <img src="img/top_img.webp" width="360" height="270" alt="">
+      <div class="info-block">
+        <p class="caption">Дорогие гости!</p>
+        <p class="text">
+          Наша безграничная любовь дала повод собрать родных и близких вместе! <br>
+          Будем рады видеть вас на нашей свадьбе
+        </p>
+        <img src="img/top_img.webp" width="360" height="270" alt="">
+      </div>
 
       <div class="address-block">
         <img src="img/top_img.webp" width="200" height="300" alt="">
-
-        <p class="date">25.05.2025</p>
-        <p class="address">
-          Дворец бракосочетания №2 <br>
-          ул. Фурштатская, д.52
-        </p>
-        <a href="http://maps.yandex.ru/-/CBQlZ03N" class="map-link">карта</a>
+        <div>
+          <p class="date">25.05.2025</p>
+          <p class="address">
+            Дворец бракосочетания №2 <br>
+            ул. Фурштатская, д.52
+          </p>
+          <a href="http://maps.yandex.ru/-/CBQlZ03N" class="map-link btn">карта</a>
+        </div>
       </div>
 
       <div class="schedule-block">
@@ -98,24 +101,43 @@
           <li style="background-color: #938676;"></li>
         </ul>
       </div>
+
+      <form class="form" action="https://formspree.io/f/xbldnkjw" method="POST">
+        <p class="text">Пожалуйста, заполните анкету до <strong>10.04.2025</strong></p>
+        <fieldset>
+          <legend class="form-caption">Присутствие на торжестве</legend>
+          <span><input id="budu" type="radio" name="presence" value="Буду" checked><label for="budu">Я приду / Мы придём</label></span>
+          <span><input id="nebudu" type="radio" name="presence" value="Не буду"><label for="nebudu">Я не смогу прийти / Мы не сможем прийти</label></span>
+          <span><input id="hz" type="radio" name="presence" value="ХЗ"><label for="hz">Затрудняюсь ответить</label></span>
+        </fieldset>
+        <label>
+          <span class="form-caption">Имя (Если вы будете с парой или семьёй, пожалуйста, внесите все имена)</span>
+          <input type="text" name="name" placeholder="Ваше имя" required>
+        </label>
+        <fieldset>
+          <legend class="form-caption">Предпочитаемые напитки</legend>
+          <span><input id="shamp" type="radio" name="drinks" value="Шампанское"><label for="shamp">Шампанское</label></span>
+          <span><input id="vino" type="radio" name="drinks" value="Вино"><label for="vino">Вино</label></span>
+          <span><input id="norm" type="radio" name="drinks" value="Не осуждаю" checked><label for="norm">Безалкогольные напитки</label></span>
+        </fieldset>
+        <label>
+          <span class="form-caption">Есть ли у вас пищевая непереносимость или аллергия? (Если да, пожалуйста, укажите на какие продукты)</span>
+          <input type="text" name="allergy">
+        </label>
+        <button class="btn" type="submit">отправить</button>
+      </form>
     </main>
 
-    <form action="https://formspree.io/f/xbldnkjw" method="POST">
-      <label>
-        Your email:
-        <input type="email" name="email">
-      </label>
-      <label>
-        Your message:
-        <textarea name="message"></textarea>
-      </label>
-      <label>
-        Name:
-        <input type="text" name="name">
-      </label>
-      <!-- your other form fields go here -->
-      <button type="submit">Send</button>
-    </form>
+    <footer class="footer">
+      <p class="text">
+        Сохраните ссылку об этом важном для нас событии,
+        а мы сохраним ваши тёплые слова и пожелания в наших сердцах
+      </p>
+
+      <p class="sign">
+        С любовью, Виктория и Александр
+      </p>
+    </footer>
 
     <script src="script.js"></script>
   </body>
