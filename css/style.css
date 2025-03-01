@@ -22,6 +22,7 @@
   --color-primary: #232b1c;
   --padding-medium: 24px;
   --padding-large: 32px;
+  --title-margin: 110px;
 }
 
 * {
@@ -331,4 +332,31 @@ a {
 }
 
 @media (max-width: 400px) {
+  :root {
+    --title-margin: 70px;
+  }
+
+  body {
+    font-size: 16px;
+  }
+
+  .address-block > img {
+    width: 120px;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .btn {
+    font-size: 18px;
+    padding: 6px;
+  }
+
+  .form-caption {
+    font-size: 18px;
+  }
+
+  .form input[type='text'] {
+    font-size: 16px;
+  }
+  
 }
