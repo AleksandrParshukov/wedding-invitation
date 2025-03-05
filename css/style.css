@@ -1,55 +1,7 @@
 @font-face {
-  font-family: 'Noto Sans';
-  src: url('./fonts/NotoSans-Regular.ttf');
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Noto Sans';
-  src: url('./fonts/NotoSans-Bold.ttf');
-  font-weight: 700;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Great Vibes';
-  src: url('./fonts/GreatVibes-Regular.ttf');
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Arsenal';
-  src: url('./fonts/ArsenalSC-Regular.ttf');
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Arsenal';
-  src: url('./fonts/ArsenalSC-Bold.ttf');
-  font-weight: 700;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Second Lesson';
-  src: url('./fonts/SecondLesson-Regular.otf');
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
   font-family: 'Caravan';
   src: url('./fonts/Caravan.ttf');
   font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Neris';
-  src: url('./fonts/Neris-Light.otf');
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Neris';
-  src: url('./fonts/Neris-SemiBold.otf');
-  font-weight: 700;
   font-style: normal;
 }
 
@@ -69,6 +21,7 @@
 
 html {
   background-color: #aaa093;
+  overflow-x: hidden;
 }
 
 body {
@@ -83,6 +36,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow-x: hidden;
 }
 
 ul {
@@ -188,6 +142,7 @@ a {
 .caption {
   font-family: var(--fancy-font);
   font-size: 60px;
+  text-align: center;
   margin-bottom: 24px;
 }
 
@@ -201,33 +156,27 @@ a {
 .address-block {
   padding-inline: var(--padding-medium);
   display: flex;
-  gap: 16px;
-}
-
-.address-block > img {
-  width: 160px;
-  height: 200px;
-  object-fit: cover;
-}
-
-.address-block > div {
-  display: flex;
   flex-direction: column;
   gap: 16px;
 }
+
+/* .address-block > div {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+} */
 
 .date {
   font-size: 32px;
 }
 
-.map-link {
-  margin-top: auto;
-}
-
 .btn {
-  font-size: 24px;
+  font-size: 20px;
   color: var(--color-primary);
-  padding: 8px;
+  width: 100%;
+  padding-block: 8px;
+  padding-inline: 70px;
+  margin-inline: auto;
   background-color: transparent;
   border: 1px solid var(--color-primary);
   display: flex;
@@ -275,7 +224,7 @@ a {
 .dresscode-block {
   color: #ffffff;
   padding-inline: var(--padding-medium);
-  padding-block: var(--padding-large);
+  padding-block: var(--padding-large) 50px;
   background-color: var(--color-primary);
 }
 
@@ -284,20 +233,22 @@ a {
   margin-top: var(--padding-medium);
 }
 
+.dresscode-block .text {
+  text-align: center;
+}
+
 .dresscode-list {
-  margin-top: 12px;
+  margin-bottom: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  gap: var(--padding-medium);
+  gap: 12px;
 }
 
 .dresscode-list li {
   width: 55px;
-  height: auto;
-  aspect-ratio: 1;
-  border-radius: 100vw;
+  height: 100px;
 }
 
 .form {
@@ -310,6 +261,10 @@ a {
 
 .form .caption {
   margin-bottom: 8px;
+}
+
+.form .text {
+  text-align: center;
 }
 
 .form-caption {
@@ -387,6 +342,52 @@ a {
   text-align: center;
 }
 
+.date-block {
+  padding: var(--padding-large) var(--padding-medium);
+}
+
+.date-block > .text {
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.calendar {
+  width: 320px;
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  grid-template-rows: repeat(5, min-content);
+}
+
+.calendar li {
+  height: auto;
+  aspect-ratio: 1;
+  border-radius: 100vw;
+  display: grid;
+  place-content: center;
+}
+
+.calendar li.active {
+  border: 1px dashed var(--color-primary);
+}
+
+.flex {
+  display: flex;
+  gap: 16px;
+}
+
+.flex > div {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.flex > img {
+  width: 120px;
+  height: auto;
+  object-fit: cover;
+}
+
 @media (max-width: 400px) {
   :root {
     --title-margin: 70px;
@@ -398,12 +399,6 @@ a {
 
   .names {
     padding-inline: 1rem;
-  }
-
-  .address-block > img {
-    width: 120px;
-    height: 100%;
-    object-fit: cover;
   }
 
   .btn {
@@ -421,5 +416,10 @@ a {
 
   .sign {
     font-size: 35px;
+  }
+
+  .dresscode-list li {
+    width: 45px;
+    height: 90px;
   }
 }
