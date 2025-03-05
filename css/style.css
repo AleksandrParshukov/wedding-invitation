@@ -16,13 +16,39 @@
   font-weight: 400;
   font-style: normal;
 }
+@font-face {
+  font-family: 'Arsenal';
+  src: url('./fonts/ArsenalSC-Regular.ttf');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Arsenal';
+  src: url('./fonts/ArsenalSC-Bold.ttf');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Second Lesson';
+  src: url('./fonts/SecondLesson-Regular.otf');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Caravan';
+  src: url('./fonts/Caravan.ttf');
+  font-weight: 400;
+  font-style: normal;
+}
 
 :root {
   --content-width: 500px;
   --color-primary: #232b1c;
   --padding-medium: 24px;
   --padding-large: 32px;
-  --title-margin: 110px;
+  --title-margin: 140px;
+  --main-font: 'Arsenal';
+  --fancy-font: 'Caravan';
 }
 
 * {
@@ -34,7 +60,7 @@ html {
 }
 
 body {
-  font-family: 'Noto Sans';
+  font-family: var(--main-font);
   font-size: 18px;
   color: var(--color-primary);
   min-height: 100vh;
@@ -58,7 +84,7 @@ p {
 }
 
 a {
-  font-family: 'Noto Sans';
+  font-family: var(--main-font);
   color: inherit;
   text-decoration: none;
 }
@@ -88,9 +114,23 @@ a {
 }
 
 .names {
-  font-family: 'Great Vibes';
-  font-size: 70px;
+  font-family: var(--fancy-font);
+  font-size: 100px;
   margin-bottom: 40px;
+  padding-inline: 4rem;
+  margin-top: -7rem;
+}
+
+.names span {
+  text-align: start;
+  width: 100%;
+  display: inline-block;
+  margin-inline: 0 var(--title-margin);
+}
+
+.names span:last-child {
+  text-align: end;
+  margin-inline: 0;
 }
 
 .timer-list {
@@ -134,8 +174,8 @@ a {
 }
 
 .caption {
-  font-family: 'Great Vibes';
-  font-size: 48px;
+  font-family: var(--fancy-font);
+  font-size: 60px;
   margin-bottom: 24px;
 }
 
@@ -143,7 +183,6 @@ a {
   width: 100%;
   height: auto;
   margin-top: var(--padding-medium);
-  aspect-ratio: 16 / 9;
   object-fit: cover;
 }
 
@@ -175,6 +214,7 @@ a {
 
 .btn {
   font-size: 24px;
+  color: var(--color-primary);
   padding: 8px;
   background-color: transparent;
   border: 1px solid var(--color-primary);
@@ -204,7 +244,7 @@ a {
 }
 
 .schedule li {
-  font-size: 28px;
+  font-size: 22px;
   padding-inline: var(--padding-medium);
   padding-block: var(--padding-medium);
   border-bottom: 2px solid var(--color-primary);
@@ -213,7 +253,7 @@ a {
 }
 
 .schedule li:first-child {
-  padding-top: 0;
+  padding-top: 8px;
 }
 
 .schedule li:last-child {
@@ -320,15 +360,15 @@ a {
 
 .footer {
   color: #ffffff;
-  padding: var(--padding-large) var(--padding-medium);
+  width: 100%;
+  padding: var(--padding-large) var(--padding-medium) 44px;
   background-color: var(--color-primary);
 }
 
 .sign {
-  font-family: 'Great Vibes';
-  font-size: 24px;
-  text-align: end;
-  margin-top: var(--padding-large);
+  font-family: var(--fancy-font);
+  font-size: 40px;
+  text-align: center;
 }
 
 @media (max-width: 400px) {
@@ -338,6 +378,10 @@ a {
 
   body {
     font-size: 16px;
+  }
+
+  .names {
+    padding-inline: 1rem;
   }
 
   .address-block > img {
@@ -358,5 +402,8 @@ a {
   .form input[type='text'] {
     font-size: 16px;
   }
-  
+
+  .sign {
+    font-size: 35px;
+  }
 }
