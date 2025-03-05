@@ -40,6 +40,18 @@
   font-weight: 400;
   font-style: normal;
 }
+@font-face {
+  font-family: 'Neris';
+  src: url('./fonts/Neris-Light.otf');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Neris';
+  src: url('./fonts/Neris-SemiBold.otf');
+  font-weight: 700;
+  font-style: normal;
+}
 
 :root {
   --content-width: 500px;
@@ -47,7 +59,7 @@
   --padding-medium: 24px;
   --padding-large: 32px;
   --title-margin: 140px;
-  --main-font: 'Arsenal';
+  --main-font: 'PT Sans';
   --fancy-font: 'Caravan';
 }
 
@@ -246,7 +258,7 @@ a {
 .schedule li {
   font-size: 22px;
   padding-inline: var(--padding-medium);
-  padding-block: var(--padding-medium);
+  padding-block: 20px;
   border-bottom: 2px solid var(--color-primary);
   display: flex;
   gap: 30px;
@@ -293,7 +305,11 @@ a {
   padding-block: var(--padding-large);
   display: flex;
   flex-direction: column;
-  gap: var(--padding-medium);
+  gap: 38px;
+}
+
+.form .caption {
+  margin-bottom: 8px;
 }
 
 .form-caption {

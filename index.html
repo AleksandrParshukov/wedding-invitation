@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Приглашение</title>
     <link rel="stylesheet" href="css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
   </head>
 
   <body>
@@ -103,22 +107,25 @@
       </div>
 
       <form class="form" action="https://formspree.io/f/xbldnkjw" method="POST">
-        <p class="text">Пожалуйста, заполните анкету до <strong>10.04.2025</strong></p>
+        <div class="">
+          <p class="caption">Анкета гостя</p>
+          <p class="text"><small>пожалуйста, заполните анкету до <strong>10.04.2025</strong></small></p>
+        </div>
         <fieldset>
-          <legend class="form-caption">Присутствие на торжестве</legend>
-          <span><input id="budu" type="radio" name="presence" value="Буду" checked><label for="budu">Я приду / Мы придём</label></span>
-          <span><input id="nebudu" type="radio" name="presence" value="Не буду"><label for="nebudu">Я не смогу прийти / Мы не сможем прийти</label></span>
-          <span><input id="hz" type="radio" name="presence" value="ХЗ"><label for="hz">Затрудняюсь ответить</label></span>
+          <legend class="form-caption">Присутствие на торжестве:</legend>
+          <span><input id="budu" type="radio" name="presence" value="Буду" checked><label for="budu">я приду / мы придём</label></span>
+          <span><input id="nebudu" type="radio" name="presence" value="Не буду"><label for="nebudu">я не смогу прийти / мы не сможем прийти</label></span>
+          <span><input id="hz" type="radio" name="presence" value="ХЗ"><label for="hz">затрудняюсь ответить</label></span>
         </fieldset>
         <label>
           <span class="form-caption">Имя (Если вы будете с парой или семьёй, пожалуйста, внесите все имена)</span>
-          <input type="text" name="name" placeholder="Ваше имя" required>
+          <input type="text" name="name" placeholder="..." required>
         </label>
         <fieldset>
-          <legend class="form-caption">Предпочитаемые напитки</legend>
-          <span><input id="shamp" type="radio" name="drinks" value="Шампанское"><label for="shamp">Шампанское</label></span>
-          <span><input id="vino" type="radio" name="drinks" value="Вино"><label for="vino">Вино</label></span>
-          <span><input id="norm" type="radio" name="drinks" value="Не осуждаю" checked><label for="norm">Безалкогольные напитки</label></span>
+          <legend class="form-caption">Предпочитаемые напитки:</legend>
+          <span><input id="shamp" type="radio" name="drinks" value="Шампанское"><label for="shamp">шампанское</label></span>
+          <span><input id="vino" type="radio" name="drinks" value="Вино"><label for="vino">вино</label></span>
+          <span><input id="norm" type="radio" name="drinks" value="Не осуждаю" checked><label for="norm">безалкогольные напитки</label></span>
         </fieldset>
         <label>
           <span class="form-caption">Есть ли у вас пищевая непереносимость или аллергия? (Если да, пожалуйста, укажите на какие продукты)</span>
