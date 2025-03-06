@@ -157,7 +157,6 @@ a {
   padding-inline: var(--padding-medium);
   display: flex;
   flex-direction: column;
-  gap: 16px;
 }
 
 /* .address-block > div {
@@ -332,7 +331,7 @@ a {
 .footer {
   color: #ffffff;
   width: 100%;
-  padding: var(--padding-large) var(--padding-medium) 44px;
+  padding: var(--padding-large) var(--padding-medium) 50px;
   background-color: var(--color-primary);
 }
 
@@ -412,10 +411,6 @@ a {
 
   .form input[type='text'] {
     font-size: 16px;
-  }
-
-  .sign {
-    font-size: 35px;
   }
 
   .dresscode-list li {
