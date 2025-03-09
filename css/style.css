@@ -4,6 +4,12 @@
   font-weight: 400;
   font-style: normal;
 }
+@font-face {
+  font-family: 'LavanderiaC';
+  src: url('./fonts/LavanderiaC.ttf');
+  font-weight: 400;
+  font-style: normal;
+}
 
 :root {
   --content-width: 500px;
@@ -12,7 +18,7 @@
   --padding-large: 32px;
   --title-margin: 140px;
   --main-font: 'PT Sans';
-  --fancy-font: 'Caravan';
+  --fancy-font: 'LavanderiaC';
 }
 
 * {
@@ -81,7 +87,9 @@ a {
 
 .names {
   font-family: var(--fancy-font);
-  font-size: 100px;
+  font-size: 72px;
+  letter-spacing: 4px;
+  line-height: 1.45;
   margin-bottom: 40px;
   padding-inline: 4rem;
   margin-top: -7rem;
@@ -141,9 +149,10 @@ a {
 
 .caption {
   font-family: var(--fancy-font);
-  font-size: 60px;
+  font-size: 48px;
+  letter-spacing: 2px;
   text-align: center;
-  margin-bottom: 24px;
+  margin-bottom: 12px;
 }
 
 .info-block img {
@@ -246,7 +255,7 @@ a {
 }
 
 .dresscode-list li {
-  width: 55px;
+  width: 48px;
   height: 100px;
 }
 
@@ -278,33 +287,52 @@ a {
   flex-direction: column;
 }
 
+.form input[type='checkbox'],
 .form input[type='radio'] {
   display: none;
 }
 
+.form input[type='checkbox'] + label,
 .form input[type='radio'] + label {
   margin-top: 8px;
+  padding-left: 2em;
   display: flex;
   gap: 16px;
   align-items: start;
   cursor: pointer;
+  position: relative;
 }
 
-.form input[type='radio'] + label:before {
+.form input[type='checkbox'] + label:before,
+.form input[type='radio'] + label:before,
+.form input[type='checkbox']:checked + label:after,
+.form input[type='radio']:checked + label:after {
   content: '';
-  width: 8px;
   height: auto;
   aspect-ratio: 1;
-  margin-top: 0.5em;
-  margin-left: 0.5em;
   background-color: transparent;
-  border-radius: 100vw;
-  outline: 2px solid var(--color-primary);
-  outline-offset: 2px;
   transition: all 0.125s ease;
+  position: absolute;
+  top: 0.3em;
+  left: 0.5em;
 }
 
-.form input[type='radio']:checked + label:before {
+.form input[type='checkbox'] + label:before,
+.form input[type='radio'] + label:before {
+  width: 10px;
+  border: 2px solid var(--color-primary);
+}
+
+.form input[type='radio'] + label:before,
+.form input[type='radio'] + label:after {
+  border-radius: 100vw;
+}
+
+.form input[type='checkbox']:checked + label:after,
+.form input[type='radio']:checked + label:after {
+  width: 6px;
+  margin-top: 4px;
+  margin-left: 4px;
   background-color: var(--color-primary);
 }
 
@@ -331,13 +359,13 @@ a {
 .footer {
   color: #ffffff;
   width: 100%;
-  padding: var(--padding-large) var(--padding-medium) 50px;
+  padding: var(--padding-large) var(--padding-medium);
   background-color: var(--color-primary);
 }
 
 .sign {
   font-family: var(--fancy-font);
-  font-size: 40px;
+  font-size: 36px;
   text-align: center;
 }
 
@@ -414,7 +442,20 @@ a {
   }
 
   .dresscode-list li {
-    width: 45px;
+    width: 40px;
     height: 90px;
+  }
+
+  .names {
+    font-size: 60px;
+  }
+  
+  .caption {
+    font-size: 40px;
+    margin-bottom: 6px;
+  }
+
+  .sign {
+    font-size: 24px;
   }
 }
